@@ -1,0 +1,50 @@
+<html>
+ <head>
+   <title>31st program</title>
+ <style>
+    body {
+     text-align:center;
+     margin-top:50px;
+     background-color:#F9E79F;
+    }
+    p {
+   font-size:20px;
+   color:#85C1E9;
+  }
+  h2 {
+    font-size:30px;
+    color:#D35400;
+    text-decoration:underline #8E44AD;
+  }
+  button {
+    padding:7px 10px;
+    background-color:#58D68D;
+  }
+  </style>
+ </head>
+ <body>
+   <h2> palindrome of a number </h2>
+   <p>Enter the Number :<input id="num1"></p>
+   <button type="button" onClick="sum()"> calculate  </button>
+   <p id="output"></p>
+   <script>
+      function sum() {
+        var a,rev=0,rem,temp;
+        a = parseInt(document.getElementById("num1").value);
+        temp = a;
+        while ( a > 0) {
+           rem = a % 10;
+           rev = (rev *10)  + rem;
+           a = parseInt(a / 10);
+           rev = Math.floor(rev);
+        }
+        if ( temp == rev) {
+            document.getElementById("output").innerHTML = "palindrome number";
+        }
+        else {
+            document.getElementById("output").innerHTML = "not palindrome number";
+        }
+      }
+    </script>
+  </body>
+ </html>

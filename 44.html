@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>44th program</title>
+   <style>
+    body {
+     text-align:center;
+     margin-top:50px;
+     background-color:#F9E79F;
+    }
+    p {
+     font-size:20px;
+     color:#85C1E9;
+    }
+    h2 {
+     font-size:30px;
+     color:#D35400;
+     text-decoration:underline #8E44AD;
+   }
+    button {
+     padding:7px 10px;
+     background-color:#58D68D;
+   }
+  </style>
+</head>
+<body>
+   <h2>Cuboid</h2>
+   <p>Enter the length :<input id="num1"></p>
+   <p>Enter the width :<input id="num2"></p>
+   <p>Enter the height :<input id="num3"></p>
+   <button type="button" onClick="cone()"> check</button>
+   <p>SA <input id="output1"></p>
+   <p>Volume <input id="output2"></p>
+   <p>LSA <input id="output3"></p>
+   <script>
+        function cone() {
+          var l,sa,v,lsa;
+          l = parseInt(document.getElementById("num1").value);
+          w = parseInt(document.getElementById("num2").value);
+          h = parseInt(document.getElementById("num3").value);
+          sa = 2*l*w + 2*l*h + 2*w*h;
+          v = l*w*h;
+          lsa = 2*h*(l+w);
+          document.getElementById("output1").value = + sa;
+          document.getElementById("output2").value = + v;
+          document.getElementById("output3").value = + lsa;
+       }
+    </script>
+</body>
+</html>

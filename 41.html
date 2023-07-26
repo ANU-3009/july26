@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>41st program</title>
+   <style>
+    body {
+     text-align:center;
+     margin-top:50px;
+     background-color:#F9E79F;
+    }
+    p {
+     font-size:20px;
+     color:#85C1E9;
+    }
+    h2 {
+     font-size:30px;
+     color:#D35400;
+     text-decoration:underline #8E44AD;
+   }
+    button {
+     padding:7px 10px;
+     background-color:#58D68D;
+   }
+  </style>
+</head>
+<body>
+   <h2>Gross salary calculation</h2>
+   <p>Enter the Basic Salary :<input id="num1"></p>
+   <button type="button" onClick="salary()"> check</button>
+   <p>Gross Salary <input id="output2"></p>
+   <script>
+        function salary() {
+          var ga,ba,hra,da;
+          ba = parseInt(document.getElementById("num1").value);
+          if ( ba <= 10000 ) {
+            hra = (8/100) * ba;
+            da = (10/100) * ba;
+          } 
+          else if ( ba <= 20000 ) {
+            hra = (16/100) * ba;
+            da = (20/100) * ba;
+          } 
+          else  {
+            hra = (24/100) * ba;
+            da = (30/100) * ba;
+          }
+           ga = ba + hra + da;
+           document.getElementById("output2").value = + ga;
+       }
+    </script>
+</body>
+</html>
